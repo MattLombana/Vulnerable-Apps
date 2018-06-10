@@ -15,12 +15,14 @@ cd Vulnerable-Apps
 pip install -Ur requirements.txt
 ```
 
+## Application Usage
+
+To use an app, enter its directory, and run app.py
+
 ## Cross Country
 
 This app is used to demonstrate XSS and CSRF.
 
-### Usage
+## Steroid Supreme
 
-```sh
-./app.py
-```
+This app is used to Demonstrate bash injection in python
