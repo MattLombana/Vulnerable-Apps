@@ -1,0 +1,25 @@
+<head>
+    <title>TEMPLATE</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></title>
+</head>
+
+<div class='NavBar'>
+    <h1>Add A Header Here</h1>
+    <ul class="menu">
+        <li><a href="{{ url_for('index') }}" {% if args.active == "index" %} class="active" {% endif %}>Home</a></li>
+        <li><a href="{{ url_for('about') }}" {% if args.active == "about" %} class="active" {% endif %}>About</a></li>
+
+        {% if not current_user.is_authenticated %}
+        <li><a href="{{ url_for('register') }}" {% if args.active == "register" %} class="active" {% endif %}>Register</a></li>
+        {% endif %}
+
+        {% if not current_user.is_authenticated %}
+        <li><a href="{{ url_for('login') }}" {% if args.active == "login" %} class="active" {% endif %}>Login</a></li>
+        {% endif %}
+
+        {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        {% endif %}
+    </ul>
+</div>
+
