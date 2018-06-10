@@ -1,0 +1,14 @@
+<head>
+    <title>Steroid Supreme</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></title>
+</head>
+
+<div class='NavBar'>
+    <h1>Steroid Supreme</h1>
+    <ul class="menu">
+        <li><a href="{{ url_for('index') }}" {% if args.active == "index" %} class="active" {% endif %}>Home</a></li>
+        <li><a href="{{ url_for('about') }}" {% if args.active == "about" %} class="active" {% endif %}>About</a></li>
+        <li><a href="{{ url_for('filebrowser') }}" {% if args.active == "filebrowser" %} class="active" {% endif %}>File Browser</a></li>
+    </ul>
+</div>
+

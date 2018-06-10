@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+
+<form action="{{ url_for('filebrowser') }}" method="post">
+  <input type="text" name="directory" placeholder="Directory"><br>
+  <input type="submit" value="List Files">
+</form></form>
+
+<div class="generaltext">
+    <p>{{ args.output|safe }}</p>
+</div>
+
+{% include 'footer.html' %}
+
