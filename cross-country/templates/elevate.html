@@ -1,0 +1,13 @@
+{% include 'header.html' %}
+
+{% include 'message_flash.html' %}
+
+<div id='elevatediv'>
+<form action="{{ url_for('elevate') }}" method="post">
+  <input type="text" name="username" placeholder="Enter the Username to Elevate">
+  <input type="submit" value="Elevate">
+</form></form>
+</div>
+
+{% include 'footer.html' %}
+

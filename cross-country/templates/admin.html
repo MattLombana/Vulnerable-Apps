@@ -1,0 +1,15 @@
+{% include 'header.html' %}
+
+<h2>Congrats, you are Admin!</h2>
+<h3>Here are your messages:</h3>
+<div id='postdiv'>
+<ul>
+{% for message in args.messages %}
+<li class='post'>
+    <p class='message'>{{ message|safe }}</p>
+</li>
+{% endfor %}
+</ul>
+</div>
+
+{% include 'footer.html' %}

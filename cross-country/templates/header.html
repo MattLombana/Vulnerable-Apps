@@ -1,0 +1,39 @@
+<head>
+    <title>Cross Country Running</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></title>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+</head>
+
+<div class='NavBar'>
+    <h1> Cross Country Running </h1>
+    <ul class="menu">
+        <li><a href="{{ url_for('index') }}" {% if args.active == "index" %} class="active" {% endif %}>Home</a></li>
+        <li><a href="{{ url_for('about') }}" {% if args.active == "about" %} class="active" {% endif %}>About</a></li>
+        <li><a href="{{ url_for('posts') }}" {% if args.active == "posts" %} class="active" {% endif %}>Posts</a></li>
+
+        {% if current_user.is_authenticated and not current_user.is_admin() %}
+        <li><a href="{{ url_for('messageadmin') }}" {% if args.active == "messageadmin" %} class="active" {% endif %}>Message The Admin</a></li>
+        {% endif %}
+
+        {% if not current_user.is_authenticated %}
+        <li><a href="{{ url_for('register') }}" {% if args.active == "register" %} class="active" {% endif %}>Register</a></li>
+        {% endif %}
+
+        {% if current_user.is_authenticated and current_user.is_admin() %}
+        <li><a href="{{ url_for('admin') }}" {% if args.active == "admin" %} class="active" {% endif %}>Admin</a></li>
+        {% endif %}
+
+        {% if current_user.is_authenticated and current_user.is_admin() %}
+        <li><a href="{{ url_for('elevate') }}" {% if args.active == "elevate" %} class="active" {% endif %}>Elevate</a></li>
+        {% endif %}
+
+        {% if not current_user.is_authenticated %}
+        <li><a href="{{ url_for('login') }}" {% if args.active == "login" %} class="active" {% endif %}>Login</a></li>
+        {% endif %}
+
+        {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        {% endif %}
+    </ul>
+</div>
+

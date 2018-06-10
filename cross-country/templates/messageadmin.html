@@ -1,0 +1,10 @@
+{% include 'header.html' %}
+
+<div id='messagediv'>
+<form action="{{ url_for('messageadmin') }}" method="post">
+  <input type="text" name="message" placeholder="Enter A Message for the admin">
+  <input type="submit" value="Post">
+</form></form>
+</div>
+
+{% include 'footer.html' %}

@@ -1,0 +1,25 @@
+{% include 'header.html' %}
+
+{% include 'message_flash.html' %}
+
+<div id='newpostdiv'>
+<form action="{{ url_for('posts') }}" method="post">
+  <input type="text" name="message" placeholder="Enter A Post">
+  <input type="submit" value="Post">
+</form></form>
+</div>
+
+
+
+<div id='postdiv'>
+<ul>
+{% for post in args.posts %}
+<li class='post'>
+    <h3 class='author'>{{ post['author']|safe }}</h3>
+    <p class='message'>{{ post['message']|safe }}</p>
+</li>
+{% endfor %}
+</ul>
+</div>
+
+{% include 'footer.html' %}
