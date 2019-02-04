@@ -132,4 +132,4 @@ def elevate():
 
 if __name__ == '__main__':
     db.initialize_db()
-    app.run(DEBUG, host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=DEBUG)
