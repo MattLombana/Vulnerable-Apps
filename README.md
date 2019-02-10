@@ -30,3 +30,7 @@ This app is used to demonstrate bash injection in python
 ## iDoor
 
 This app is used to demonstrate Insecure Direct Object References (IDOR)
+
+## Black Friday
+
+This app is used to demonstrate Poor Data Validation
