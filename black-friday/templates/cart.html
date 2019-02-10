@@ -1,0 +1,44 @@
+{% include 'header.html' %}
+{% include 'message_flash.html' %}
+
+<table>
+    <tr>
+        <th></th>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Product total</th>
+        <th>Remove</th>
+    </tr>
+{% for product in args.cart %}
+    <tr>
+		<td><img src="../static/media/products/{{ product['name'] }}.jpg" class="productimage"/></td>
+        <td>{{ product['name'] }}</td>
+        <td>{{ product['price'] }}</td>
+        <td>{{ product['quantity'] }}</td>
+        <td>{{ product['product_total'] }}</td>
+		<td>
+			<form action="/remcart" method="post">
+				<input type="hidden" name="id" id="id" value="{{ product['id'] }}">
+				<button>Remove From Cart</button>
+			</form>
+		</td>
+    </tr>
+{% endfor %}
+
+<tr>
+    <th>Total:</th>
+    <th>{{ args.total }}</th>
+</tr>
+</table>
+
+<form action="/checkout" method="post">
+    <button>Checkout</button>
+</form>
+
+<p></p>
+
+
+
+{% include 'footer.html' %}
+

@@ -1,0 +1,140 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.NavBar	ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.NavBar li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+.NavBar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.NavBar li a:hover {
+    background-color: #111;
+}
+
+.NavBar {
+	width: 100%;
+    background-color: #333;
+}
+
+.active {
+    background-color: #4286f4;
+}
+
+h1 {
+    font-size: 5em;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #bbb;
+}
+
+.footer {
+    position: fixed;
+	width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    left: 0;
+	bottom: 0;
+	height: 3em;
+	color: white;
+    text-align: center;
+}
+
+input {
+    padding: 1em;
+    margin: 1em 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #4286f4;
+    border-radius: .5em;
+    margin-bottom: 5em;
+    color: white;
+    font-size: 1em;
+}
+
+form {
+    width: 60%;
+    margin: auto;
+}
+
+.flashes {
+    margin: auto;
+    width: 60%;
+    list-style-type: none;
+    padding: 1em;
+    overflow: hidden;
+    text-align: center;
+}
+
+.flash {
+    width: 100%;
+    padding-top: 2em;
+    margin: auto;
+    height: 3em;
+    background-color: #ffa5a7;
+    border-radius: 1em;
+}
+
+.banner {
+    width: 100%;
+}
+
+.generaltext {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 3em;
+}
+
+.productimage {
+    width: 100px;
+    height: 100px;
+}
+
+
+table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}

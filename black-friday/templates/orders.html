@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+{% include 'message_flash.html' %}
+
+<table>
+    <tr>
+        <th>Order Date</th>
+        <th>Cost</th>
+        <th>Items</th>
+    </tr>
+{% for order in args.orders %}
+    <tr>
+        <td>{{ order['date'] }}</td>
+        <td>{{ order['cost'] }}</td>
+        <td>{{ order['items'] }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+{% include 'footer.html' %}
+

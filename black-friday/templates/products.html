@@ -1,0 +1,33 @@
+{% include 'header.html' %}
+{% include 'message_flash.html' %}
+
+<table>
+    <tr>
+		<th></th>
+    	<th>Item</th>
+    	<th>Price</th>
+    	<th></th>
+	</tr>
+{% for product in args.products %}
+	<tr>
+		<td><img src="../static/media/products/{{ product['name'] }}.jpg" class="productimage"/></td>
+		<td>{{ product['name'] }}</td>
+		<td>{{ product['price'] }}</td>
+		<td>
+			<form action="/addcart" method="post">
+				<label for="quantity">Quantity: </label>
+				<input type="number" name="quantity" id="quantity">
+				<input type="hidden" name="id" id="id" value="{{ product['id'] }}">
+				<button>Add to Cart</button>
+			</form>
+		</td>
+	</tr>
+{% endfor %}
+</table>
+
+<p></p>
+
+
+
+{% include 'footer.html' %}
+
