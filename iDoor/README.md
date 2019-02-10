@@ -33,5 +33,5 @@ Notice on the /doors/index page, when not logged in, you see that the admin has 
 6th door.
 
 When you log in and view the /doors/index page, you are greeted with 5 buttons to view the doors.
-When you click on one, you are taken to /doors/<number>. To view the secret 6th door, just change the
+When you click on one, you are taken to /doors/number. To view the secret 6th door, just change the
 url to /doors/6.
