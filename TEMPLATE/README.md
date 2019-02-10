@@ -11,6 +11,11 @@ insert about here
 insert goals here
 
 
+## Hints
+
+insert hints here
+
+
 ## User Accounts:
 
 | User  | Password|
