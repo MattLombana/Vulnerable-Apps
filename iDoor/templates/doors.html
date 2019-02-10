@@ -1,0 +1,33 @@
+{% include 'header.html' %}
+{% include 'message_flash.html' %}
+
+
+{% if current_user.is_authenticated %}
+
+{% if args.doorid == 'index' %}
+<p>We have many doors in our new iDoor line.</p>
+<p>We have a secret one that you can't view yet!.</p>
+<ul class="buttonlist">
+    <li><a href="{{ url_for('doors', doorid=1) }}" class="button">1</a></li>
+    <li><a href="{{ url_for('doors', doorid=2) }}" class="button">2</a></li>
+    <li><a href="{{ url_for('doors', doorid=3) }}" class="button">3</a></li>
+    <li><a href="{{ url_for('doors', doorid=4) }}" class="button">4</a></li>
+    <li><a href="{{ url_for('doors', doorid=5) }}" class="button">5</a></li>
+</ul>
+{% else %}
+<p>
+<ul class="buttonlist">
+    <li><a href="{{ url_for('doors', doorid='index') }}" class="button">Back</a></li>
+</ul>
+</p>
+<img src="../static/media/doors/{{ args.doorid }}.jpg"/>
+{% endif %}
+
+
+{% else %}
+<p>You must login to view our 5 doors!
+(Only our admin can see our experimental 6th door!)
+</p>
+{% endif %}
+
+{% include 'footer.html' %}
