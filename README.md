@@ -3,21 +3,22 @@
 This is a repo to hold a collection of vulnerable applications used to practice and learn about
 security vulnerabilities.
 
+## Docker Usage
 
-## Installation
+If you want to use docker, you can use the following commands for any given application:
 
-```sh
-python3 -m venv Vulnerable-Apps-Virt
-cd Vulnerable-Apps-virt
-. bin/activate
-git clone https://github.com/MattLombana/Vulnerable-Apps.git
-cd Vulnerable-Apps
-pip install -Ur requirements.txt
+```
+docker-compose build
+docker-compose up -d
 ```
 
-## Application Usage
+## Local Usage
 
-To use an app, enter its directory, and run app.py
+To use an app, enter its directory, and run the following commands:
+```
+pip install -r requirements.txt
+./app.py
+```
 
 ## Cross Country
 

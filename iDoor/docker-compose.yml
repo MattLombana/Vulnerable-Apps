@@ -1,0 +1,7 @@
+version: '3'
+services:
+  idoor:
+    image: "idoor:latest"
+    build: .
+    ports:
+      - "5000:5000"

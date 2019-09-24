@@ -1,0 +1,7 @@
+version: '3'
+services:
+  cross-country:
+    image: "cross-country:latest"
+    build: .
+    ports:
+      - "5000:5000"
